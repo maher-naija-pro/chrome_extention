@@ -1,0 +1,21 @@
+{
+    "name": "maher extention",
+    "version": "1.0.0",
+    "description": "my extention",
+    "manifest_version": 3,
+    "permissions": ["scripting","clipboardWrite", "activeTab"],
+    "background": {
+           "service_worker": "background.js" 
+    },
+
+    "author": "Maher",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "my news"
+    },
+   "content_scripts": [{
+        "js": ["foreground.js"],
+         "matches": ["https://github.com/*"]
+    }]
+
+}
